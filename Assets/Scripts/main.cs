@@ -6,6 +6,8 @@ public class main : MonoBehaviour
 {
     public float speed;
     public float jumpheight;
+    public GameObject jiguanprefab;
+    public float secondsBetweenjiguan;
 
     private Rigidbody rb;
     private bool isGrounded;
@@ -16,6 +18,7 @@ public class main : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         isGrounded = false;
+        Invoke("jiguan", 2f);
     }
 
     // Update is called once per frame
@@ -50,5 +53,12 @@ public class main : MonoBehaviour
         {
             isGrounded = false;
         }
+    }
+
+    void jiguan()
+    {
+        GameObject jiguan = Instantiate<GameObject>(jiguanprefab);
+        jiguan.transform.position = new Vector3(transform.position.x + 20.0f, -9.0f, 0f);
+        Invoke("jiguan", secondsBetweenjiguan);
     }
 }
