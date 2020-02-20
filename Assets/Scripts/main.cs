@@ -25,11 +25,10 @@ public class main : MonoBehaviour
 
     void FixedUpdate()
     {
-        float moveHorizontal = 1;
-        Vector3 movement = new Vector3(moveHorizontal, 0.0f, 0.0f);
+        rb.transform.Translate(speed * Time.deltaTime, 0, 0);
         Vector3 up = new Vector3(0.0f, jumpheight, 0.0f);
 
-        rb.AddForce(movement * speed);
+       
 
         if (Input.GetKeyDown("space"))
         {
