@@ -123,7 +123,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 8
-  jumpheight: 300
+  jumpheight: 600
   jiguanprefab: {fileID: 3696074361242794498, guid: de90265192f7b7f4e9c6d9049a3317fd,
     type: 3}
   secondsBetweenjiguan: 5
