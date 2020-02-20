@@ -15,7 +15,6 @@ public class main : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        groundContact = false;
     }
 
     // Update is called once per frame
@@ -27,26 +26,15 @@ public class main : MonoBehaviour
     void FixedUpdate()
     {
         float moveHorizontal = 1;
-        Vector3 up = new Vector3(0.0f, jumpheight, 0.0f);
-
         Vector3 movement = new Vector3(moveHorizontal, 0.0f, 0.0f);
+        Vector3 up = new Vector3(0.0f, jumpheight, 0.0f);
 
         rb.AddForce(movement * speed);
 
-        if (Input.GetKeyDown("space") && groundContact)
+        if (Input.GetKeyDown("space"))
         {
             rb.AddForce(up);
-            groundContact = false;
-        }
-    }
-
-    void OnTriggerEnter(Collider coll)
-    {
-
-        GameObject collidedWith = coll.gameObject;
-        if (collidedWith.tag == "Ground")
-        {
-            groundContact = true;
+            print("Slingshot:OnMouseEnter()");
         }
     }
 }

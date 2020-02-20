@@ -5,12 +5,12 @@ using UnityEngine;
 public class FollowCam : MonoBehaviour
 {
     public GameObject player;
-    private Vector3 offset;
+    private float offset;
 
     // Start is called before the first frame update
     void Start()
     {
-        offset = transform.position - player.transform.position;
+        offset = transform.position.x - player.transform.position.x;
     }
 
     // Update is called once per frame
@@ -21,6 +21,7 @@ public class FollowCam : MonoBehaviour
 
     void LateUpdate()
     {
-        transform.position = player.transform.position + offset;
+        
+        transform.position = new Vector3(offset, 9.0f, -10.0f); ;
     }
 }
