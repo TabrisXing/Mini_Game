@@ -150,7 +150,7 @@ PrefabInstance:
     - target: {fileID: 8674499250580806235, guid: aee5eaa4e6ddbd44191577902f38acfc,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -9
+      value: -8.5
       objectReference: {fileID: 0}
     - target: {fileID: 8674499250580806235, guid: aee5eaa4e6ddbd44191577902f38acfc,
         type: 3}
@@ -232,7 +232,7 @@ MonoBehaviour:
   cloudPrefab: {fileID: 3488819539649891505, guid: c2352f5640dc2d74b820e76746bcf6ba,
     type: 3}
   cloudPosMin: {x: -50, y: -5, z: 10}
-  cloudPosMax: {x: 150, y: 100, z: 10}
+  cloudPosMax: {x: 280, y: 100, z: 10}
   cloudScaleMin: 1
   cloudScaleMax: 3
   cloudSpeedMult: 0.5

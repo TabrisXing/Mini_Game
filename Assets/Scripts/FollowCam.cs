@@ -21,7 +21,6 @@ public class FollowCam : MonoBehaviour
 
     void LateUpdate()
     {
-        
         transform.position = new Vector3(player.transform.position.x + offset, 0f, -10.0f);
     }
 }

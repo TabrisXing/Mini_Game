@@ -58,7 +58,7 @@ public class main : MonoBehaviour
     void jiguan()
     {
         GameObject jiguan = Instantiate<GameObject>(jiguanprefab);
-        jiguan.transform.position = new Vector3(transform.position.x + 20.0f, -9.0f, 0f);
+        jiguan.transform.position = new Vector3(transform.position.x + 35.0f, -9.0f, 0f);
         Invoke("jiguan", secondsBetweenjiguan);
     }
 }
