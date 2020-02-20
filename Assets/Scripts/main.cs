@@ -26,7 +26,7 @@ public class main : MonoBehaviour
 
     void FixedUpdate()
     {
-        float moveHorizontal = Input.GetAxis("Horizontal");
+        float moveHorizontal = 1;
         Vector3 up = new Vector3(0.0f, jumpheight, 0.0f);
 
         Vector3 movement = new Vector3(moveHorizontal, 0.0f, 0.0f);
